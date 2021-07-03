@@ -3,7 +3,9 @@ void main() {
 
   //Strings
   String name = 'Nancy';
-  String surname = 'García';
+  
+  //If you add final, it's like a const
+  final surname = 'García';
   
   print('$name $surname');
 }
