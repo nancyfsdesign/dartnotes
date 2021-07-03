@@ -2,8 +2,8 @@
 void main() {
 
   //Strings
-  var name = 'Nancy';
-  var surname = 'García';
+  String name = 'Nancy';
+  String surname = 'García';
   
-
+  print('$name $surname');
 }
