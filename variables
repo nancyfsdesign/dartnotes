@@ -1,0 +1,9 @@
+// Variables at dart
+void main() {
+
+  //Strings
+  var name = 'Nancy';
+  var surname = 'García';
+  
+
+}
