@@ -4,8 +4,21 @@ void main() {
   //Strings
   String name = 'Nancy';
   
-  //If you add final, it's like a const
-  final surname = 'García';
+  // Final, similar a las constantes en el momento de su inicialización, mantiene este valor.
+  final String surname = 'García';
+  
+  // Const, mantendrás el valor en cualquier momento de la ejecución del programa.
+  const String name2 = 'Lola';
   
   print('$name $surname');
+  
+  //Números
+  
+  //Listas, si añadimos ? esa lista puede tener valores nulos.
+  List? numeros = [];
+  List<int> numeros = [0,1,2,3,4,5,6...];
+  List<double> numerosdec = [0.01,0.235,....];
+  
+  //Map, como un objeto
+  
 }
