@@ -1,0 +1,72 @@
+/* 
+* Vamos a ver las clases en flutter
+*
+*/
+
+
+/* EJEMPLO CON LOS VALORES INICIALIZADOS */
+void main () {
+
+  //Normalmente en Flutter no veremos la palabra reservada 'new' para las clases, pero 
+  //para que sea más fácil identificar las clases, no hay problema para incluirla
+  final lobezno = new Heroe(); 
+  
+  lobezno.nombre = 'Logan';
+  lobezno.poder = 'Regeneración';
+  
+  print ( lobezno );
+
+}
+
+class Heroe {
+  // Vamos a ver los métodos, posibles propiedades y constructores
+  
+  String? nombre; // Necesitamos agregar la interrogante ? para permitir el null
+  String? poder;  // Necesitamos agregar la interrogante ? para permitir el null
+  
+  
+  //Para imprimir tan solo una parte de sus valores, por ejemplo el nombre, debemos incluirlo entre llaves como acabamos de hacer.
+  // Con override estamos sobreescribiendo la instrucción
+  @override
+  String toString() {
+    return 'Heroe: nombre: ${this.nombre}, poder: ${ this.poder }';
+  }
+  
+}
+
+
+/* EJEMPLO CON LOS VALORES no INICIALIZADOS */
+void main () {
+
+  //Aquí las estamos inicializando las variables con unos términos que luego podemos sobrescribir
+  final lobezno = new Heroe('Logan', 'Regeneración'); 
+  
+  print ( lobezno );
+
+}
+
+class Heroe2 { 
+  String nombre;
+  String poder;
+  
+  //Creamos el constructor y lo inicializamos
+  Heroe2 (this.nombre, this.poder);
+  
+  // Segunda alternativa que nos permite inicializar e indicar los valores como opcionales
+  // Entonces si necesitamos sí o sí estos valores podemos realizar lo siguiente, incluir la palabra required en las variables.
+  Heroe2 ({
+    required this.nombre,
+    required this.poder
+  )};
+
+  /* ¡NO HACER ESTO! */
+  // Heroe2 ( String pNombre ) {
+  //  this.nombre = pNombre;
+  // }
+
+  @override
+  String toString() {
+    return 'Heroe: nombre: ${this.nombre}, poder: ${ this.poder }';
+  }
+  
+}
